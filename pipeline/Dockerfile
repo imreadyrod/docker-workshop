@@ -12,7 +12,6 @@ RUN uv sync --locked
 
 # RUN pip install pandas pyarrow
 
+COPY ingest_data.py .
 
-COPY pipeline.py .
-
-ENTRYPOINT ["uv", "run", "python", "pipeline.py"]
+ENTRYPOINT ["uv", "run", "python", "ingest_data.py"]
